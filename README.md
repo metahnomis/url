@@ -1,2 +1,2 @@
 # url
-Génératuer de fichier d'URL cliquable
+Générateur de fichier d'URL cliquable
