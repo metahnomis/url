@@ -78,7 +78,7 @@
             background-color: #2C2C2C;
             font-family: "Montserrat", sans-serif;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 600;
             color: #fff;
             text-decoration: none;
             display: inline-block;
@@ -88,9 +88,20 @@
             border: 2px solid transparent;
             transition: all 0.3s ease-in-out;
             border-radius: 10px;
+            display: flex;
+            align-items: center;
         }
 
-        .button:hover, button:hover:not(:disabled) { border: 2px solid #444444; }
+        button svg, .button svg{
+            margin-right: 10px;
+            fill: #fff;
+            transition: all .3s ease-in-out;
+        }
+
+        .button:hover, button:hover:not(:disabled) { 
+            border: 2px solid #5e6d09;
+            transform: translateX(1px);
+         }
         
         button:disabled {
             opacity: 0.5;
@@ -100,6 +111,10 @@
         button:not(:disabled) {
             background-color: #D2EE3A;
             color: #1E1E1E;
+        }
+
+        button:not(:disabled) svg{
+            fill: #1E1E1E;
         }
       
         footer {
@@ -165,7 +180,6 @@
                 margin-top: 10px;
                 margin-left: 0;
                 margin-right: 0;
-                width: 82%;
             }
 
             button, .button {
@@ -189,7 +203,9 @@
         <div class="input-wrapper">
             <label for="urlInput">URL:</label>
             <input type="text" id="urlInput" placeholder="https://example.com">
-            <button id="downloadButton" onclick="downloadFile()" disabled>Télécharger</button>
+            <button id="downloadButton" onclick="downloadFile()" disabled><svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 12.5263H12V14H0V12.5263ZM6.66667 8.232L10.714 3.75789L11.6567 4.79979L6 11.0526L0.343333 4.80053L1.286 3.75789L5.33333 8.23053V0H6.66667V8.232Z"/>
+                </svg>Télécharger</button>
         </div>
 
         <p class="info"><span>🛈</span>Copier votre lien et appuyer sur le bouton "Télécharger". Vous pouvez maintenant placer ce fichier dans le Drive.</p>
